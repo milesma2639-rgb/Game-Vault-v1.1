@@ -1,0 +1,101 @@
+:root {
+  --bg: #0d1022;
+  --panel: #181f42;
+  --panel2: #20295a;
+  --line: #4a5bb2;
+  --text: #eef2ff;
+  --muted: #c4ccf4;
+  --accent: #69dbff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #1c2452, var(--bg));
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+}
+h1 { margin: 0; }
+h2 { margin: 0; }
+p { margin: .4rem 0 0; }
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sidebar, .viewer {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  box-shadow: 0 10px 18px rgba(0, 0, 0, .25);
+}
+.sidebar { padding: .9rem; }
+.hint { color: var(--muted); font-size: .95rem; }
+code { color: var(--accent); }
+.game-list {
+  display: grid;
+  gap: .6rem;
+  margin-top: .8rem;
+}
+.game-card {
+  width: 100%;
+  text-align: left;
+  background: #2a3679;
+  color: #fff;
+  border: 1px solid #6679d7;
+  border-radius: 10px;
+  padding: .7rem;
+  cursor: pointer;
+}
+.game-card.active { border-color: var(--accent); background: #3849a8; }
+.game-card small { display: block; margin-top: .4rem; color: #d2dbff; }
+.viewer { padding: .9rem; }
+.viewer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem;
+}
+.actions { display: flex; gap: .5rem; }
+.btn {
+  border: none;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #071127;
+  font-weight: 700;
+  padding: .55rem .85rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn.secondary {
+  background: #334297;
+  color: white;
+  border: 1px solid #6679d7;
+}
+.description { color: var(--muted); margin-bottom: .8rem; }
+.frame-wrap {
+  border: 1px solid #5f72cc;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0a0f24;
+}
+iframe {
+  width: 100%;
+  height: 70vh;
+  min-height: 520px;
+  border: 0;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  iframe { min-height: 420px; height: 58vh; }
+}
