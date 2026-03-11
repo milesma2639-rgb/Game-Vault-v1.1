@@ -1,0 +1,18 @@
+{
+  "games": [
+    {
+      "id": "cookie-clone",
+      "name": "Cookie Clicker (Open Clone)",
+      "description": "Self-hosted demo game package. Replace with your own legal game build.",
+      "path": "games/demo-clicker/index.html",
+      "tags": ["clicker", "self-hosted"]
+    },
+    {
+      "id": "runner-clone",
+      "name": "Runner Demo",
+      "description": "Second self-hosted demo package. Add real licensed game folders the same way.",
+      "path": "games/demo-runner/index.html",
+      "tags": ["arcade", "self-hosted"]
+    }
+  ]
+}

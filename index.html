@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Vault | Self-Hosted</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>🎮 Game Vault</h1>
+      <p>Play real games hosted on your own website.</p>
+    </div>
+    <button id="toggleFullscreen" class="btn">Fullscreen Game</button>
   <title>Game Vault</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -14,6 +24,24 @@
 
   <main class="layout">
     <aside class="sidebar">
+      <h2>My Games</h2>
+      <p class="hint">Add more games in <code>games/manifest.json</code>.</p>
+      <div id="gameList" class="game-list"></div>
+    </aside>
+
+    <section class="viewer">
+      <div class="viewer-head">
+        <h2 id="currentTitle">Select a game</h2>
+        <div class="actions">
+          <a id="openDirect" class="btn secondary" target="_blank" rel="noopener">Open Direct</a>
+          <button id="reloadGame" class="btn secondary">Reload</button>
+        </div>
+      </div>
+
+      <p id="currentDescription" class="description">Pick a game from the left panel.</p>
+
+      <div class="frame-wrap">
+        <iframe id="gameFrame" title="Game Frame" loading="lazy" allow="fullscreen; gamepad; autoplay"></iframe>
       <h3>Built-in Games</h3>
       <div class="game-list" id="gameList"></div>
     </aside>
