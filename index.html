@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Vault</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 Game Vault</h1>
+    <p>All games are built directly into this website. Pick one and play instantly.</p>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h3>Built-in Games</h3>
+      <div class="game-list" id="gameList"></div>
+    </aside>
+
+    <section class="game-panel">
+      <div id="cookie" class="game-screen">
+        <h2>Cookie Clicker</h2>
+        <div class="hud">
+          <span class="badge" id="cookieCount">Cookies: 0</span>
+          <span class="badge" id="cookieRate">Per second: 0</span>
+        </div>
+        <button class="click-cookie" id="cookieButton">COOKIE</button>
+        <div class="shop">
+          <button id="buyGrandma">Buy Grandma (+1/s) - 25</button>
+          <button id="buyFactory">Buy Factory (+5/s) - 120</button>
+          <button id="buyPortal">Buy Portal (+20/s) - 800</button>
+        </div>
+      </div>
+
+      <div id="slope" class="game-screen">
+        <h2>Slope Rush</h2>
+        <p class="note">Use ← and → to avoid blocks and stay alive.</p>
+        <div class="hud"><span class="badge" id="slopeScore">Score: 0</span></div>
+        <canvas id="slopeCanvas" width="760" height="380"></canvas>
+        <button class="primary" id="slopeRestart">Restart</button>
+      </div>
+
+      <div id="stickman" class="game-screen">
+        <h2>Stickman Multiply</h2>
+        <p class="note">Move with A/D and collect green multipliers while avoiding red dividers.</p>
+        <div class="hud"><span class="badge" id="stickmanCount">Stickmen: 1</span></div>
+        <canvas id="stickmanCanvas" width="760" height="380"></canvas>
+        <button class="primary" id="stickmanRestart">Restart</button>
+      </div>
+
+      <div id="hollow" class="game-screen">
+        <h2>Hollow Knight Mini</h2>
+        <p class="note">Move with A/D, jump with W/Space, attack with J.</p>
+        <div class="hud">
+          <span class="badge" id="hollowHealth">Health: 5</span>
+          <span class="badge" id="hollowKills">Kills: 0</span>
+        </div>
+        <canvas id="hollowCanvas" width="760" height="380"></canvas>
+        <button class="primary" id="hollowRestart">Restart</button>
+      </div>
+
+      <div id="bank" class="game-screen">
+        <h2>Bank Robbery Escape</h2>
+        <p class="note">Collect all money bags and reach the exit while avoiding guards.</p>
+        <div class="hud"><span class="badge" id="bankStatus">Bags: 0 / 5</span></div>
+        <canvas id="bankCanvas" width="760" height="380"></canvas>
+        <button class="primary" id="bankRestart">Restart</button>
+      </div>
+
+      <div id="runner" class="game-screen">
+        <h2>Endless Runner (Bonus Game)</h2>
+        <p class="note">Press Space to jump over obstacles.</p>
+        <div class="hud"><span class="badge" id="runnerScore">Score: 0</span></div>
+        <canvas id="runnerCanvas" width="760" height="380"></canvas>
+        <button class="primary" id="runnerRestart">Restart</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
